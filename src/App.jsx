@@ -22,7 +22,7 @@ function App() {
                     id={post.id}
                     title={post.title}
                     content={post.content}
-                    date={post.date}/>
+                    date={post.createdAt}/>
                 );
             })}
         </div>
