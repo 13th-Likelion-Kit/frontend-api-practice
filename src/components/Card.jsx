@@ -1,9 +1,37 @@
 // CSS는 개인취향대로 사용 (예: styled-components, CSS 모듈 등)
+import { Trash2 } from 'lucide-react';
+import styles from './card.module.scss';
 
-function Card() {
+function Card({ title, content, id, date, onDelete }) {
+    const handleDelete = async () => {
+        try {
+            const response = await fetch(
+                `http://119.56.230.161:11111/posts/${id}`,
+                {
+                    method: 'DELETE',
+                },
+            );
+            if (!response.ok) {
+                throw new Error('Failed to delete post');
+            }
+
+            onDelete();
+        } catch (err) {
+            console.error('Failed to delete post:', err);
+        }
+    };
     return (
-        <div>
-            <div>여기에 조회된 게시글 컴포넌트를 만들어보세요.</div>
+        <div className={styles.container}>
+            <div className={styles.topBar}>
+                <div>{title}</div>
+                <div>{date}</div>
+            </div>
+            <div className={styles.content}>{content}</div>
+            <div className={styles.buttonContainer}>
+                <button onClick={() => handleDelete()}>
+                    <Trash2 width={20} onClick={() => onDelete()} />
+                </button>
+            </div>
         </div>
     );
 }
