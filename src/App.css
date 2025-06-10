@@ -1,0 +1,84 @@
+.card-container {
+    background: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    width: 400px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+    position: relative;
+}
+
+.card-title-input {
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #222;
+}
+
+.card-content-textarea {
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #444;
+    resize: none;
+}
+
+.card-button {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-title-view {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.card-content-view {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 16px;
+    white-space: pre-line;
+}
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.post-date {
+    font-size: 12px;
+    color: #888;
+    margin-left: 12px;
+}
+.post-trash-btn {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
